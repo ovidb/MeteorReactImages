@@ -3,6 +3,7 @@
 
 // Import the React library
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 // Create a component
 const App = () => {
@@ -14,3 +15,4 @@ const App = () => {
 };
 
 // Render this component to the screen.
+ReactDOM.render(<App />, document.querySelector('.container'));
