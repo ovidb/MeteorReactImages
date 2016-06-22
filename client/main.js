@@ -5,6 +5,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
+
 // Create a component
 const App = () => {
   return(
@@ -15,4 +17,6 @@ const App = () => {
 };
 
 // Render this component to the screen.
-ReactDOM.render(<App />, document.querySelector('.container'));
+Meteor.startup(()=> {
+  ReactDOM.render(<App />, document.querySelector('.container'));
+})
