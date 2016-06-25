@@ -11,6 +11,10 @@ import ImageList from './components/image_list';
 
 // Create a component
 class App extends Component {
+  componentWillMount() {
+    axios.get('https://api.imgur.com/3/gallery/hot/viral/0')
+      .then(response => console.log(response));
+  }
 
   render() {
     return(
@@ -24,6 +28,5 @@ class App extends Component {
 // Render this component to the screen.
 Meteor.startup(()=> {
   ReactDOM.render(<App />, document.querySelector('.container'));
-  axios.get('https://api.imgur.com/3/gallery/hot/viral/0')
-    .then(response => console.log(response));
+
 })
